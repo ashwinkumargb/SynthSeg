@@ -19,7 +19,6 @@ implied. See the License for the specific language governing permissions and lim
 License.
 """
 
-
 from ext.lab2im import utils
 from SynthSeg.brain_generator import BrainGenerator
 

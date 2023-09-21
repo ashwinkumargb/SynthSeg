@@ -140,6 +140,10 @@ randomise_res = True
 
 # ------------------------------------------------------ Generate ------------------------------------------------------
 
+
+# Parameters to modify: n_channels, target_res, output_shape
+# See if output_shape will be zero-padded
+
 # instantiate BrainGenerator object
 brain_generator = BrainGenerator(labels_dir=path_label_map,
                                  generation_labels=generation_labels,
