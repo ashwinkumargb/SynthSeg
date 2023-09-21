@@ -30,3 +30,8 @@ SynthSeg/qc.py
 SynthSeg/training_heart.py
 SynthSeg/training_vae.py
 SynthSeg/validate_vae.py
+
+scripts/tutorials/outputs*
+scripts/tutorials/ext/
+scripts/tutorials/SynthSeg/
+scripts/tutorials/image_folder/
