@@ -28,7 +28,7 @@ from SynthSeg.training import training
 
 
 # path training label maps
-path_training_label_maps = '/local_mount/space/ladyyy/data/users/ashwink/python-codebases/SynthSeg/Example_Data/label_maps/label_maps_subset'
+path_training_label_maps = '/local_mount/space/ladyyy/data/users/ashwink/python-codebases/SynthSeg/Example_Data/label_maps/label_maps'
 path_model_dir = './outputs_tutorial_3_mrf/'
 batchsize = 1
 
@@ -45,8 +45,8 @@ feat_multiplier = 2    # if feat_multiplier is set to 1, we will keep the number
 # training parameters
 lr = 1e-4               # learning rate
 wl2_epochs = 1          # number of pre-training epochs with wl2 metric w.r.t. the layer before the softmax
-dice_epochs = 10       # number of training epochs
-steps_per_epoch = 1000  # number of iteration per epoch
+dice_epochs = 100       # number of training epochs
+steps_per_epoch = 5000  # number of iteration per epoch
 
 
 # ---------- Generation parameters ----------
@@ -54,12 +54,12 @@ steps_per_epoch = 1000  # number of iteration per epoch
 
 # generation and segmentation labels
 path_generation_labels = '/local_mount/space/ladyyy/data/users/ashwink/python-codebases/SynthSeg/Example_Data/numpy_arrays/generation_labels.npy'
-n_neutral_labels = 21
+n_neutral_labels = 19
 path_segmentation_labels = '/local_mount/space/ladyyy/data/users/ashwink/python-codebases/SynthSeg/Example_Data/numpy_arrays/segmentation_labels.npy'
 
 # shape and resolution of the outputs
 target_res = None
-output_shape = 256
+output_shape = 160
 n_channels = 9
 
 # GMM sampling

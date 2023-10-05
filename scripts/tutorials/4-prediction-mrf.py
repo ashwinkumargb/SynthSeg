@@ -40,7 +40,7 @@ path_posteriors = './outputs_tutorial_4_mrf/predicted_information/im_post.nii.gz
 path_vol = './outputs_tutorial_4_mrf/predicted_information/volumes.csv'
 
 # of course we need to provide the path to the trained model (here we use the main synthseg model).
-path_model = '/local_mount/space/ladyyy/data/users/ashwink/python-codebases/SynthSeg/scripts/tutorials/outputs_tutorial_3_mrf/dice_002.h5'
+path_model = '/local_mount/space/ladyyy/data/users/ashwink/python-codebases/SynthSeg/scripts/tutorials/outputs_tutorial_3_mrf/dice_012.h5'
 # but we also need to provide the path to the segmentation labels used during training
 path_segmentation_labels = '/local_mount/space/ladyyy/data/users/ashwink/python-codebases/SynthSeg/Example_Data/numpy_arrays/segmentation_labels.npy'
 # optionally we can give a numpy array with the names corresponding to the structures in path_segmentation_labels
@@ -51,7 +51,7 @@ path_segmentation_names = '/local_mount/space/ladyyy/data/users/ashwink/python-c
 # input image will be automatically padded to the nearest shape divisible by 2**n_levels (this is just for processing,
 # the output will then be cropped to the original image size).
 # Alternatively, you can crop the input to a smaller shape for faster processing, or to make it fit on your GPU.
-cropping = 256
+cropping = 160
 # Finally, we finish preprocessing the input by resampling it to the resolution at which the network has been trained to
 # produce predictions. If the input image has a resolution outside the range [target_res-0.05, target_res+0.05], it will
 # automatically be resampled to target_res.
@@ -64,7 +64,7 @@ path_resampled = './outputs_tutorial_4_mrf/predicted_information/im_resampled_ta
 # the resulting image. In this case, and if the network has right/left specific labels, it is also very important to
 # provide the number of neutral labels. This must be the exact same as the one used during training.
 flip = True
-n_neutral_labels = 21
+n_neutral_labels = 19
 # Second, we can smooth the probability maps produced by the network. This doesn't change much the results, but helps to
 # reduce high frequency noise in the obtained segmentations.
 sigma_smoothing = 0.5
